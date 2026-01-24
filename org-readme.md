@@ -1,60 +1,60 @@
+<h1 align="center">Welcome to MindsDB 👋</h1>
 
-<h1 align="center"> Welcome to MindsDB 👋</h1> 
-
-We are dedicated to helping companies get actionable answers across multiple enterprise data sources—just by asking in plain English.
+<div align="center">
+We help teams get actionable answers across enterprise data sources by asking questions in plain English.
+</div>
 
 <h3 align="center">
-	<a href="https://www.mindsdb.com?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Website</a>
-	<span> | </span>
-	<a href="https://docs.mindsdb.com?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Docs</a>
-	<span> | </span>
-	<a href="https://mindsdb.com/joincommunity">Community Slack</a>
-	<span> | </span>
-	<a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Contact</a>
+  <a href="https://www.mindsdb.com?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Website</a>
+  <span> | </span>
+  <a href="https://docs.mindsdb.com?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Docs</a>
+  <span> | </span>
+  <a href="https://mindsdb.com/joincommunity">Community Slack</a>
+  <span> | </span>
+  <a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Contact</a>
 </h3>
 
 <div align="center">
-<a href="https://www.youtube.com/watch?v=QIdPpzcaxXg" target="_blank">
-  <img src="/assets/MindsDB-github-diagram.jpg" alt="MindsDB Demo" width=80%>
-</a>
+  <a href="https://www.youtube.com/watch?v=QIdPpzcaxXg" target="_blank">
+    <img src="/assets/MindsDB-github-diagram.jpg" alt="MindsDB Demo" width="80%">
+  </a>
 </div>
 
-</br>
+<br />
 
 ## Our repositories
 
 ### Core
-🌟 [MindsDB](https://github.com/mindsdb/mindsdb) - Query Engine for AI agents and LLMs, enabling them to answer questions directly from organizations' data.
+🌟 **[MindsDB](https://github.com/mindsdb/mindsdb)**  
+Query engine for AI agents and LLMs, enabling them to answer questions directly from an organization’s data.
 
-### Clients / SDKs:
-- [MindsDB Docker Extension](https://github.com/mindsdb/mindsdb-docker-extension) - allows you to use MindsDB within Docker Desktop.
-- [MindsDB JavaScript SDK](https://github.com/mindsdb/mindsdb-js-sdk) - official JavaScript SDK for MindsDB
-- [MindsDB Python SDK](https://github.com/mindsdb/mindsdb_python_sdk) - the Python SDK for MindsDB server.
-- [Minds Python SDK](https://github.com/mindsdb/minds_python_sdk) - official Python SDK for Minds.
-- [Minds MCP](https://github.com/mindsdb/minds-mcp) - an MCP server for Minds
+### Clients / SDKs
+- **[MindsDB Docker Extension](https://github.com/mindsdb/mindsdb-docker-extension)** — Use MindsDB inside Docker Desktop.
+- **[MindsDB JavaScript SDK](https://github.com/mindsdb/mindsdb-js-sdk)** — Official JavaScript SDK for MindsDB.
+- **[MindsDB Python SDK](https://github.com/mindsdb/mindsdb_python_sdk)** — Official Python SDK for MindsDB Server.
+- **[Minds Python SDK](https://github.com/mindsdb/minds_python_sdk)** — Official Python SDK for Minds.
+- **[Minds MCP](https://github.com/mindsdb/minds-mcp)** — MCP server for Minds.
 
-### Side projects:
-- [WorkBench](https://github.com/mindsdb/WorkBench) - benchmark for evaluating agent performance on realistic workplace tasks
-- [LightWood](https://github.com/mindsdb/lightwood) - an AutoML framework to build machine learning pipelines in a declarative way.
-- [Type Infer](https://github.com/mindsdb/type_infer) - a Python package to automatically infer data types in tabular data.
-- [AIPDF](https://github.com/mindsdb/aipdf) - a tool to OCR PDFs using gen-AI models.
-- [F.L.A.T.](https://github.com/mindsdb/flat-ai) - an AI library to build powerful agents through absolute simplicity.
-- [T.I.M.E.](https://github.com/mindsdb/email_rag) - a simple RAG system over email.
+### Side projects
+- **[Workbench](https://github.com/mindsdb/WorkBench)** — Benchmark for evaluating agent performance on realistic workplace tasks.
+- **[Lightwood](https://github.com/mindsdb/lightwood)** — AutoML framework for building ML pipelines declaratively.
+- **[type_infer](https://github.com/mindsdb/type_infer)** — Automatically infer data types in tabular datasets.
+- **[AIPDF](https://github.com/mindsdb/aipdf)** — OCR PDFs using generative AI models.
+- **[F.L.A.T.](https://github.com/mindsdb/flat-ai)** — Library for building agents with a simple, composable approach.
+- **[T.I.M.E.](https://github.com/mindsdb/email_rag)** — A simple RAG system over email.
 
 ## Getting started
-New here? Start with our [MindsDB repo](https://github.com/mindsdb/mindsdb). 
-Want a working demo? Check the [quickstart guide](https://github.com/mindsdb/mindsdb?tab=readme-ov-file#quickstart).
+New here? Start with **[mindsdb](https://github.com/mindsdb/mindsdb)**.  
+Want a working demo? See the **[quickstart guide](https://github.com/mindsdb/mindsdb?tab=readme-ov-file#quickstart)**.
 
 ## Contributing
-
-We're an open-source-loving community, and contributions are always welcome!
-Ways you can help: build an integration, improve documentation, or report bugs. More details in our [core repo](https://github.com/mindsdb/mindsdb?tab=readme-ov-file#-contribute).
+We welcome contributions across the ecosystem: integrations, docs, bug reports, and improvements.  
+See contribution guidelines in the **[core repo](https://github.com/mindsdb/mindsdb?tab=readme-ov-file#-contribute)**.
 
 ## Security
-
-If you find a security vulnerability, please do not open a public issue. Report privately - check our <a href="https://github.com/mindsdb/mindsdb/security">security policy</a> for reporting instructions.
+If you find a security vulnerability, please don’t open a public issue.  
+Report it privately via our **[security policy](https://github.com/mindsdb/mindsdb/security)**.
 
 ## Support
-
-Stuck on a query? Found a bug? We’re here to help. Get in touch via our <a href="https://mindsdb.com/joincommunity">community Slack</a>. For commercial support, please [contact us](https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo).
-
+Need help or found a bug? Reach us via **[Community Slack](https://mindsdb.com/joincommunity)**.  
+For commercial support, **[contact us](https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo)**.
