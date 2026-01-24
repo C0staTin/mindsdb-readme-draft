@@ -88,7 +88,9 @@ docker run --name mindsdb_container \
 # open http://127.0.0.1:47334
 ```
 
-Connect and blend live data from various sources, such as Postgres and MongoDB (<a href="https://docs.mindsdb.com/mindsdb-connect?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">docs</a>).
+1) Connect and blend live data.
+   Docs: <a href="https://docs.mindsdb.com/mindsdb-connect?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Connect sources</a>.
+
 ```sql
 --1. Connect SQL database
 CREATE DATABASE postgres_demo
@@ -122,8 +124,12 @@ CREATE VIEW mindsdb.enterprise_sales AS (
 );
 ```
 
-Automatically vectorize unstructured data (reviews), blending it with structured metadata (<a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">docs</a>).
-  <br /> (*Note: Install a ChromaDB <a href="https://docs.mindsdb.com/setup/self-hosted/docker#install-dependencies?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">dependency</a> in the container before running the commands below.*)
+2) Create a knowledge base for unstructured data.
+   Docs: <a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Knowledge bases</a>.
+
+> Note: Install the ChromaDB dependency in the container first:
+<a href="https://docs.mindsdb.com/setup/self-hosted/docker#install-dependencies?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Docker dependencies</a>.
+
 ```sql
 -- 4. Create a knowledge base
 CREATE KNOWLEDGE BASE reviews_kb
@@ -137,7 +143,8 @@ SELECT review_text, review_id, product_id, customer_id, rating, review_date
 FROM mongodb_demo.reviews;
 ```
 
-Ask questions in natural language (<a href="https://docs.mindsdb.com/mindsdb_sql/agents/agent?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">docs</a>).
+3) Ask questions in natural language.
+   Docs: <a href="https://docs.mindsdb.com/mindsdb_sql/agents/agent?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Agents</a>.
 ```sql
 -- 6. Create an agent
 CREATE AGENT my_agent
@@ -157,7 +164,7 @@ FROM my_agent
 WHERE question = 'What do enterprise customers say about our best selling product?';
 ```
 
-Integrate it into your own application via API or MCP (<a href="https://docs.mindsdb.com/overview_sdks_apis?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">docs</a>).
+Integrate via API or MCP: <a href="https://docs.mindsdb.com/overview_sdks_apis?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">SDKs & APIs</a>.
 
 ## 📃 Tutorials
 - Enterprise Knowledge Search (<a href="https://mindsdb.com/blog/fast-track-knowledge-bases-how-to-build-semantic-ai-search-by-andriy-burkov?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">example</a>)
@@ -206,20 +213,20 @@ Stuck on a query? Found a bug? We’re here to help.
 
 ## 🤝 Contribute to MindsDB
 
-MindsDB is an open-source project, and we love contributions! Whether you are fixing a bug, adding a new data integration, or building a new AI agent skill, your help is welcome.
+MindsDB is open source and contributions are welcome, whether you're fixing a bug, adding an integration, improving docs, or building agent capabilities.
 
 <strong>Ways you can help:</strong>
-- 🔌 Add a Data Integration: We support 100+ sources, but there is always room for more. Help us connect to new databases, SaaS APIs, or vector stores.
-- 🧠 Add an AI Handler: Integrate the latest LLMs or specialized models into the MindsDB reasoning engine.
-- 📚 Improve Documentation: Help fellow developers by clarifying guides, fixing typos, or adding examples.
-- 🐛 Report Bugs: Found an issue? Let us know so we can make the engine more robust.
+- 🔌 Add a data integration: Connect new databases, SaaS APIs, or vector stores.
+- 🧠 Add an AI handler: Integrate new LLMs or specialized models into the reasoning engine.
+- 📚 Improve documentation: Clarify guides, fix typos, add examples.
+- 🐛 Report bugs: File issues with clear steps to reproduce.
 
 <strong>Ready to start?</strong>
 
-- Read our <a href="https://docs.mindsdb.com/contribute/contribute?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Contribution Guide</a> to get set up.
-- Check out <a href="https://github.com/mindsdb/mindsdb/issues">Open Issues</a> to find a task to tackle.
-- Join the #contributors channel on <a href="https://mindsdb.com/joincommunity">Slack</a> to discuss ideas.
-- Check out our <a href="https://mindsdb.com/community?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">community rewards and programs</a>.
+- Read the <a href="https://docs.mindsdb.com/contribute/contribute?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Contribution Guide</a> to get set up.
+- Browse <a href="https://github.com/mindsdb/mindsdb/issues">Open Issues</a>.
+- Join the #contributors channel in <a href="https://mindsdb.com/joincommunity">Slack</a>.
+- Explore <a href="https://mindsdb.com/community?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">community rewards and programs</a>.
 
 <div align="center">
 
