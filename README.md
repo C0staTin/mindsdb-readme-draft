@@ -1,65 +1,52 @@
 <a name="readme-top"></a>
 
-  <br />
-    <a href="https://github.com/mindsdb/mindsdb">
-    <img src="/assets/mindsdb-header-github.png" alt="MindsDB" width=100%>
+<p align="center">
+  <a href="https://github.com/mindsdb/mindsdb">
+    <img src="/assets/mindsdb-header-github.png" alt="MindsDB" width="100%" />
+  </a>
+</p>
 
-  <br />
-  <br />
-	
 <div align="center">
-	<a href="https://pypi.org/project/MindsDB/" target="_blank"><img src="https://badge.fury.io/py/MindsDB.svg" alt="MindsDB Release"></a>
-	<a href="https://www.python.org/downloads/" target="_blank"><img src="https://img.shields.io/badge/python-3.10.x%7C%203.11.x%7C%203.12.x%7C%203.13.x-brightgreen.svg" alt="Python supported"></a>
-	<a href="https://hub.docker.com/u/mindsdb" target="_blank"><img src="https://img.shields.io/docker/pulls/mindsdb/mindsdb" alt="Docker pulls"></a>
-
-  <br />
-
+  <a href="https://pypi.org/project/MindsDB/" target="_blank">
+    <img src="https://badge.fury.io/py/MindsDB.svg" alt="MindsDB Release" />
+  </a>
+  <a href="https://www.python.org/downloads/" target="_blank">
+    <img src="https://img.shields.io/badge/python-3.10.x%7C%203.11.x%7C%203.12.x%7C%203.13.x-brightgreen.svg" alt="Python supported" />
+  </a>
+  <a href="https://hub.docker.com/u/mindsdb" target="_blank">
+    <img src="https://img.shields.io/docker/pulls/mindsdb/mindsdb" alt="Docker pulls" />
+  </a>
 
   <p align="center">
-    <br />
     <a href="https://mindsdb.com?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Website</a>
     ·
     <a href="https://docs.mindsdb.com?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Docs</a>
     ·
-    <a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Contact us for a Demo</a>
+    <a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Contact us for a demo</a>
     ·
     <a href="https://mindsdb.com/joincommunity?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Community Slack</a>
   </p>
 </div>
 
-----------------------------------------
+---
 
-MindsDB is the most widely adopted Query Engine for AI agents and LLMs that need to answer questions directly from Databases, Data Warehouses and Applications — no ETL required.
+MindsDB is an open-source query engine for AI agents and LLMs that need to answer questions directly from databases, data warehouses, and applications, no ETL required.
 
 <div align="center">
-<a href="https://www.youtube.com/watch?v=HN4fHtS4mvo" target="_blank">
-  <img src="/assets/mindsdb_demo.gif" alt="MindsDB Demo" width=80%>
-</a>
+  <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo" target="_blank">
+    <img src="/assets/mindsdb_demo.gif" alt="MindsDB Demo" width="80%" />
+  </a>
 </div>
 
-## What can you build with MindsDB Query Engine
+## What you can build with MindsDB Query Engine
 
-<br>
-<table border="1" cellspacing="0" cellpadding="16" style="border-collapse: collapse; width: 100%;">
-  <tr>
-    <td width="50%" valign="top">
-      <strong>TEXT-TO-SQL AGENTS</strong><br><br>
-      Get precise, data-driven answers instantly, using natural language.<br><br>
-      Unify and answer questions from all your data (MySQL, Salesforce, Shopify, etc), skip ETL.<br><br>
-      <a href="https://www.youtube.com/watch?v=QIdPpzcaxXg">Watch video</a>
-    </td>
-    <td width="50%" valign="top">
-      <strong>SEMANTIC SEARCH AGENTS</strong><br><br>
-      Augment LLMs' responses with your most relevant information.<br><br>
-      Semantically search across unstructured data sources like documents, Jira tickets, Google Drive, etc.<br><br>
-      <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo">Watch video</a>
-    </td>
-  </tr>
-</table>
+| TEXT-TO-SQL AGENTS | SEMANTIC SEARCH AGENTS |
+| --- | --- |
+| Get precise, data-driven answers using natural language. <br /><br /> Unify and query data across sources (MySQL, Salesforce, Shopify, etc.), without ETL. <br /><br /> <a href="https://www.youtube.com/watch?v=QIdPpzcaxXg">Watch video</a> | Ground LLM responses in your most relevant internal knowledge. <br /><br /> Search across unstructured sources like documents, Jira tickets, Google Drive, and more. <br /><br /> <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo">Watch video</a> |
 
 ## How MindsDB works
 
-The core philosophy of MindsDB—Connect, Unify, Respond — mirrors the workflow of a developer building agents. At the center lies MindsDB’s unified SQL-compatible data language, enriched with additional constructs that enable the search of unstructured data, manage data workflows (including jobs and triggers), and more.
+MindsDB follows a simple workflow: **Connect → Unify → Respond**. At the center is a SQL-compatible data language with additional constructs for searching unstructured data, managing workflows (jobs/triggers), and building agents.
 
 <table style="width:100%; border-collapse:collapse; border:none;">
   <tr>
@@ -67,8 +54,7 @@ The core philosophy of MindsDB—Connect, Unify, Respond — mirrors the workflo
       <strong><a href="https://docs.mindsdb.com/integrations/data-overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Connect</a></strong>
     </td>
     <td style="width:75%; border:none; padding:8px 16px; vertical-align:middle;">
-      <strong>Universal Data Access:</strong>
-      Give your agents universal read access to 200+ live data sources (Postgres, MongoDB, Slack, Files).
+      <strong>Universal data access:</strong> Give your agents read access to 200+ live data sources (Postgres, MongoDB, Slack, files, and more).
     </td>
   </tr>
   <tr>
@@ -76,8 +62,7 @@ The core philosophy of MindsDB—Connect, Unify, Respond — mirrors the workflo
       <strong><a href="https://docs.mindsdb.com/mindsdb-unify?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Unify</a></strong>
     </td>
     <td style="width:75%; border:none; padding:8px 16px; vertical-align:middle;">
-      <strong>Dynamic Context Engine:</strong>
-      Fuse structured tables with vectorized data (text, PDFs, HTML) inside a Knowledge Base.
+      <strong>Dynamic context engine:</strong> Fuse structured tables with vectorized data (text, PDFs, HTML) inside a Knowledge Base.
     </td>
   </tr>
   <tr>
@@ -85,20 +70,21 @@ The core philosophy of MindsDB—Connect, Unify, Respond — mirrors the workflo
       <strong><a href="https://docs.mindsdb.com/mindsdb-respond?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Respond</a></strong>
     </td>
     <td style="width:75%; border:none; padding:8px 16px; vertical-align:middle;">
-      <strong>Autonomous Reasoning:</strong>
-      Deploy agents that don't just "retrieve" but "reason" by joining data points across your entire stack.
+      <strong>Autonomous reasoning:</strong> Deploy agents that join data points across your stack to produce grounded answers.
     </td>
   </tr>
 </table>
 
-## Quickstart - Build Your First Agent in 5 minutes
+## Quickstart: build your first agent in 5 minutes
 
-Install MindsDB via Docker, or Docker Desktop (<a href="https://docs.mindsdb.com/setup/self-hosted/docker?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">docs</a>).
+Install MindsDB via Docker (or Docker Desktop). Docs: <a href="https://docs.mindsdb.com/setup/self-hosted/docker?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Docker setup</a>.
+
 ```bash
 docker run --name mindsdb_container \
   -e MINDSDB_APIS=http,mysql \
   -p 47334:47334 -p 47335:47335 \
   mindsdb/mindsdb
+
 # open http://127.0.0.1:47334
 ```
 
@@ -216,7 +202,7 @@ Stuck on a query? Found a bug? We’re here to help.
   </tr>
 </table>
 
-Security Note: If you find a security vulnerability, please do not open a public issue. Refer to our <a href="https://github.com/mindsdb/mindsdb/security">Security Policy</a> for reporting instructions.
+**Security Note:** If you find a security vulnerability, please do not open a public issue. Refer to our <a href="https://github.com/mindsdb/mindsdb/security">Security Policy</a> for reporting instructions.
 
 ## 🤝 Contribute to MindsDB
 
@@ -248,9 +234,8 @@ Made with [contrib.rocks](https://contrib.rocks)
 
 ## 📚 Useful Resources
 
-- Step-by-step guides, product news (<a href="https://mindsdb.com/blog?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">subscribe to blog</a>)
-- Demos, live webinars with experts (<a href="https://mindsdb.com/events?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">events</a>)
-- Community and support (<a href="https://mindsdb.com/joincommunity">Slack</a>)
-- Brand guidelines (<a href="https://mindsdb.com/press-kit?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">press-kit</a>)
-- Contact us (<a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">form</a>)
-
+- Product news & guides (<a href="https://mindsdb.com/blog?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">blog</a>)
+- Live demos & webinars (<a href="https://mindsdb.com/events?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">events</a>)
+= Community support (<a href="https://mindsdb.com/joincommunity">Slack</a>)
+- Brand guidelines (<a href="https://mindsdb.com/press-kit?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">press kit</a>)
+- Contact (<a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">form</a>)
