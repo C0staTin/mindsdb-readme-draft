@@ -22,7 +22,7 @@ We help teams get actionable answers across enterprise data sources by asking qu
 
 ## Getting started
 New here? Start with **[mindsdb](https://github.com/mindsdb/mindsdb)**.  
-Want a working demo? See the **[quickstart guide](https://docs.mindsdb.com/quickstart-tutorial)**.
+Want a working demo? See the **[quickstart guide](https://docs.mindsdb.com/quickstart-tutorial?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo)**.
 ## Our repositories
 
 ### Core
