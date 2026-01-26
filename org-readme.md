@@ -39,7 +39,7 @@ Query engine for AI agents and LLMs, enabling them to answer questions directly 
 ### Side projects
 - **[Workbench](https://github.com/mindsdb/WorkBench)** — Benchmark for evaluating agent performance on realistic workplace tasks.
 - **[Lightwood](https://github.com/mindsdb/lightwood)** — AutoML framework for building ML pipelines declaratively.
-- **[type_infer](https://github.com/mindsdb/type_infer)** — Automatically infer data types in tabular datasets.
+- **[Type Infer](https://github.com/mindsdb/type_infer)** — Automatically infer data types in tabular datasets.
 - **[AIPDF](https://github.com/mindsdb/aipdf)** — OCR PDFs using generative AI models.
 - **[F.L.A.T.](https://github.com/mindsdb/flat-ai)** — Library for building agents with a simple, composable approach.
 - **[T.I.M.E.](https://github.com/mindsdb/email_rag)** — A simple RAG system over email.
