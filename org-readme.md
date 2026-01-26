@@ -20,8 +20,9 @@ We help teams get actionable answers across enterprise data sources by asking qu
   </a>
 </div>
 
-<br />
-
+## Getting started
+New here? Start with **[mindsdb](https://github.com/mindsdb/mindsdb)**.  
+Want a working demo? See the **[quickstart guide](https://docs.mindsdb.com/quickstart-tutorial)**.
 ## Our repositories
 
 ### Core
@@ -43,9 +44,6 @@ Query engine for AI agents and LLMs, enabling them to answer questions directly 
 - **[F.L.A.T.](https://github.com/mindsdb/flat-ai)** — Library for building agents with a simple, composable approach.
 - **[T.I.M.E.](https://github.com/mindsdb/email_rag)** — A simple RAG system over email.
 
-## Getting started
-New here? Start with **[mindsdb](https://github.com/mindsdb/mindsdb)**.  
-Want a working demo? See the **[quickstart guide](https://github.com/mindsdb/mindsdb?tab=readme-ov-file#quickstart)**.
 
 ## Contributing
 We welcome contributions across the ecosystem: integrations, docs, bug reports, and improvements.  
