@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/mindsdb/mindsdb">
-    <img src="/assets/mindsdb-header-github.png" alt="MindsDB" width="100%" />
+    <img src="/assets/mindsdb-header-github.png" alt="Query engine for AI analytics, powering agents to answer questions across all your live data" width="100%" />
   </a>
 </p>
 
@@ -30,11 +30,11 @@
 
 ---
 
-MindsDB is an open-source query engine for AI agents and LLMs that need to answer questions directly from databases, data warehouses, and applications, no ETL required.
+MindsDB is a popular open-source query engine for AI analytics, powering AI agents that need to answer questions directly from databases, data warehouses, and applications, with no ETL required.
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo" target="_blank">
-    <img src="/assets/mindsdb_demo.gif" alt="MindsDB Demo" width="80%" />
+    <img src="/assets/mindsdb_demo.gif" alt="MindsDB demo - answer questions in plain English from live enterprise data" width="80%" />
   </a>
 </div>
 
@@ -46,7 +46,7 @@ MindsDB is an open-source query engine for AI agents and LLMs that need to answe
 
 ## How MindsDB works
 
-MindsDB follows a simple workflow: **Connect → Unify → Respond**. At the center is a SQL-compatible data language with additional constructs for searching unstructured data, managing workflows (jobs/triggers), and building agents.
+MindsDB follows a simple workflow: **Connect → Unify → Respond**. At the center is an SQL-compatible data language with additional constructs for searching unstructured data, managing workflows (jobs/triggers), and building agents.
 
 <table style="width:100%; border-collapse:collapse; border:none;">
   <tr>
@@ -54,7 +54,7 @@ MindsDB follows a simple workflow: **Connect → Unify → Respond**. At the cen
       <strong><a href="https://docs.mindsdb.com/integrations/data-overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Connect</a></strong>
     </td>
     <td style="width:75%; border:none; padding:8px 16px; vertical-align:middle;">
-      <strong>Universal data access:</strong> Give your agents read access to 200+ live data sources (Postgres, MongoDB, Slack, files, and more).
+      <strong>Universal data access:</strong> Give your agents federated access to 200+ live data sources (Postgres, MongoDB, Slack, files, and more).
     </td>
   </tr>
   <tr>
@@ -70,7 +70,7 @@ MindsDB follows a simple workflow: **Connect → Unify → Respond**. At the cen
       <strong><a href="https://docs.mindsdb.com/mindsdb-respond?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Respond</a></strong>
     </td>
     <td style="width:75%; border:none; padding:8px 16px; vertical-align:middle;">
-      <strong>Autonomous reasoning:</strong> Deploy agents that join data points across your stack to produce grounded answers.
+      <strong>Autonomous reasoning:</strong> Deploy agents that blend and retrieve data points across your stack to produce grounded answers.
     </td>
   </tr>
 </table>
@@ -209,7 +209,7 @@ Stuck on a query? Found a bug? We’re here to help.
   </tr>
 </table>
 
-**Security Note:** If you find a security vulnerability, please do not open a public issue. Refer to our <a href="https://github.com/mindsdb/mindsdb/security">Security Policy</a> for reporting instructions.
+**Security Note:** If you find a security vulnerability, please do not open a public issue. Refer to our <a href="https://github.com/mindsdb/mindsdb/security">security policy</a> for reporting instructions.
 
 ## 🤝 Contribute to MindsDB
 
@@ -223,8 +223,8 @@ MindsDB is open source and contributions are welcome, whether you're fixing a bu
 
 <strong>Ready to start?</strong>
 
-- Read the <a href="https://docs.mindsdb.com/contribute/contribute?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Contribution Guide</a> to get set up.
-- Browse <a href="https://github.com/mindsdb/mindsdb/issues">Open Issues</a>.
+- Read the <a href="https://docs.mindsdb.com/contribute/contribute?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">contribution guide</a> to get set up.
+- Browse <a href="https://github.com/mindsdb/mindsdb/issues">open issues</a>.
 - Join the #contributors channel in <a href="https://mindsdb.com/joincommunity">Slack</a>.
 - Explore <a href="https://mindsdb.com/community?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">community rewards and programs</a>.
 
