@@ -23,6 +23,7 @@ We help teams get actionable answers across enterprise data sources by asking qu
 ## Getting started
 New here? Start with **[mindsdb](https://github.com/mindsdb/mindsdb)**.  
 Want a working demo? See the **[quickstart guide](https://docs.mindsdb.com/quickstart-tutorial?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo)**.
+
 ## Our repositories
 
 ### Core
@@ -36,13 +37,8 @@ Query engine for AI agents and LLMs, enabling them to answer questions directly 
 - **[Minds Python SDK](https://github.com/mindsdb/minds_python_sdk)** — Official Python SDK for Minds.
 - **[Minds MCP](https://github.com/mindsdb/minds-mcp)** — MCP server for Minds.
 
-### Side projects
-- **[Workbench](https://github.com/mindsdb/WorkBench)** — Benchmark for evaluating agent performance on realistic workplace tasks.
-- **[Lightwood](https://github.com/mindsdb/lightwood)** — AutoML framework for building ML pipelines declaratively.
-- **[Type Infer](https://github.com/mindsdb/type_infer)** — Automatically infer data types in tabular datasets.
+### Extensions & Utilities
 - **[AIPDF](https://github.com/mindsdb/aipdf)** — OCR PDFs using generative AI models.
-- **[F.L.A.T.](https://github.com/mindsdb/flat-ai)** — Library for building agents with a simple, composable approach.
-- **[T.I.M.E.](https://github.com/mindsdb/email_rag)** — A simple RAG system over email.
 
 
 ## Contributing
