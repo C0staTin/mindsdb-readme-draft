@@ -16,7 +16,7 @@ We help teams get actionable answers across enterprise data sources by asking qu
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=QIdPpzcaxXg" target="_blank">
-    <img src="/assets/MindsDB-github-diagram.jpg" alt="MindsDB Demo" width="80%">
+    <img src="https://github.com/mindsdb/mindsdb/blob/main/assets/MindsDB-org-readme-diagram.jpg" alt="MindsDB Demo" width="80%">
   </a>
 </div>
 
@@ -43,7 +43,7 @@ Query engine for AI agents and LLMs, enabling them to answer questions directly 
 
 ## Contributing
 We welcome contributions across the ecosystem: integrations, docs, bug reports, and improvements.  
-See contribution guidelines in the **[core repo](https://github.com/mindsdb/mindsdb?tab=readme-ov-file#-contribute)**.
+See contribution guidelines in the **[core repo](https://github.com/mindsdb/mindsdb/#-contribute)**.
 
 ## Security
 If you find a security vulnerability, please don’t open a public issue.  
