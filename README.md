@@ -129,11 +129,8 @@ CREATE VIEW mindsdb.enterprise_sales AS (
 );
 ```
 
-2) Create a knowledge base for unstructured data.
+2) Vectorize unstructured data by creating a "knowledge base."
    Docs: <a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Knowledge bases</a>.
-
-> Note: Install the ChromaDB dependency in the container first:
-<a href="https://docs.mindsdb.com/setup/self-hosted/docker#install-dependencies?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Docker dependencies</a>.
 
 ```sql
 -- 4. Create a knowledge base
@@ -158,7 +155,7 @@ data = {
    "knowledge_bases": ["mindsdb.reviews_kb"],
    "tables": ['mindsdb.enterprise_sales']
 },
-prompt_template='you are a skilled AI analyst. Provide accurate responces based on the data available to you:
+prompt_template='you are a skilled data analyst. Provide accurate responses based on the data available to you:
 "mindsdb.reviews_kb" has data about product reviews
 "mindsdb.enterprise_sales" has data about sales to enterprise customers
 ';
@@ -166,7 +163,7 @@ prompt_template='you are a skilled AI analyst. Provide accurate responces based 
 -- 7. Query agent
 SELECT answer
 FROM my_agent 
-WHERE question = 'What do enterprise customers say about our best selling product?';
+WHERE question = 'What do enterprise customers say about our best-selling product?';
 ```
 
 Integrate via API or MCP: <a href="https://docs.mindsdb.com/overview_sdks_apis?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">SDKs & APIs</a>.
