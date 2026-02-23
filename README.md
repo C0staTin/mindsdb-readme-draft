@@ -13,8 +13,8 @@
   <a href="https://www.python.org/downloads/" target="_blank">
     <img src="https://img.shields.io/badge/python-3.10.x%7C%203.11.x%7C%203.12.x%7C%203.13.x-brightgreen.svg" alt="Python supported" />
   </a>
-  <a href="https://hub.docker.com/u/mindsdb" target="_blank">
-    <img src="https://img.shields.io/docker/pulls/mindsdb/mindsdb" alt="Docker pulls" />
+  <a href="https://hub.docker.com/r/mindsdb/mindsdb" target="_blank">
+  <img src="https://img.shields.io/docker/pulls/mindsdb/mindsdb.svg?logo=docker&label=Docker%20pulls&cacheSeconds=86400" alt="Docker pulls" />
   </a>
 
   <p align="center">
