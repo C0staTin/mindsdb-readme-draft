@@ -33,8 +33,13 @@
 MindsDB is a popular open-source query engine for AI analytics, powering AI agents that need to answer questions directly from databases, data warehouses, and applications, with no ETL required.
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo" target="_blank">
-    <img src="/assets/mindsdb_demo.gif" alt="MindsDB demo - answer questions in plain English from live enterprise data" width="80%" />
+  <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo" title="Watch demo">
+    <img
+      src="/assets/mindsdb_demo.gif"
+      alt="MindsDB demo - answer questions in plain English from live enterprise data"
+      title="Click here to watch the full demo video"
+      width="80%"
+    />
   </a>
 </div>
 
