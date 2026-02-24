@@ -47,7 +47,7 @@ MindsDB is a popular open-source query engine for AI analytics, powering AI agen
 
 | TEXT-TO-SQL AGENTS | SEMANTIC SEARCH AGENTS |
 | --- | --- |
-| Get precise, data-driven answers using natural language. <br /><br /> Unify and query data across sources (MySQL, Salesforce, Shopify, etc.), without ETL. <br /><br /> <a href="https://www.youtube.com/watch?v=QIdPpzcaxXg">Watch video</a> | Ground LLM responses in your most relevant internal knowledge. <br /><br /> Search across unstructured sources like documents, Jira tickets, Google Drive, and more. <br /><br /> <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo">Watch video</a> |
+| Get precise, data-driven answers using natural language. <br /><br /> Unify and query data across sources (MySQL, Salesforce, Shopify, etc.), without ETL. <br /><br /> <a href="https://www.youtube.com/watch?v=QIdPpzcaxXg">Watch video</a> | Ground LLM responses in your most relevant internal knowledge. <br /><br /> Search across unstructured sources like documents, support tickets, Google Drive, and more. <br /><br /> <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo">Watch video</a> |
 
 ## How MindsDB works
 
