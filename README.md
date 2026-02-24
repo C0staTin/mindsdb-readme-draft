@@ -82,7 +82,7 @@ MindsDB follows a simple workflow: **Connect → Unify → Respond**. At the cen
 
 ## Quickstart: build your first agent in 5 minutes
 
-Install MindsDB via Docker (or Docker Desktop) and configure system defaults, like LLMs, embedding and reranking models. Docs: <a href="https://docs.mindsdb.com/setup/self-hosted/docker?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Installation</a>.
+Install MindsDB via Docker (or Docker Desktop) and configure system default models settings. Docs: <a href="https://docs.mindsdb.com/setup/self-hosted/docker?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Installation</a>.
 
 ```bash
 docker run --name mindsdb_container \
