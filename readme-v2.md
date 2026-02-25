@@ -80,93 +80,82 @@ MindsDB follows a simple workflow: **Connect → Unify → Respond**. At the cen
   </tr>
 </table>
 
-## Quickstart: build your first agent in 5 minutes
+## Setup
 
-Install MindsDB via Docker (or Docker Desktop) and configure system default models settings. Docs: <a href="https://docs.mindsdb.com/setup/self-hosted/docker?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Installation</a>.
+Users can install MindsDB via <a href="https://docs.mindsdb.com/setup/self-hosted/docker?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Docker</a>, <a href="https://docs.mindsdb.com/setup/self-hosted/docker-desktop?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Docker Extension</a>, or <a href="https://docs.mindsdb.com/contribute/install?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">PyPI</a>.
 
+Here is how to pull and run MindsDB via Docker:
 ```bash
 docker run --name mindsdb_container \
-  -e MINDSDB_APIS=http,mysql \
-  -p 47334:47334 -p 47335:47335 \
-  mindsdb/mindsdb
-
-# open http://127.0.0.1:47334
+-e MINDSDB_APIS=http,mysql \
+-p 47334:47334 -p 47335:47335 \
+mindsdb/mindsdb:latest
 ```
 
-1) Connect and blend live data.
-   Docs: <a href="https://docs.mindsdb.com/mindsdb-connect?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Connect sources</a>.
+## Usage
 
+**Follow the <a href="https://docs.mindsdb.com/quickstart-tutorial?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">quickstart guide</a> to get started with MindsDB using our demo data.**
+
+Retrieve and analyze data from over 200 <a href="https://docs.mindsdb.com/integrations/data-overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">data sources</a> in one SQL dialect. For AI agents, this means faster response time, better accuracy, and lower token consumption.
 ```sql
---1. Connect SQL database
-CREATE DATABASE postgres_demo
-WITH ENGINE = 'postgres', 
-PARAMETERS = {
-    "user": "demo_user",
-    "password": "demo_password",
-    "host": "samples.mindsdb.com",
-    "port": "5432",
-    "database": "demo",
-    "schema": "sample_data"
-};
+--use SQL to aggregate pipeline data from Salesforce 
+SELECT SUM(ExpectedRevenue) AS open_pipeline
+FROM salesforce.opportunities
+WHERE close_date >= CURDATE()
 
---2. Connect document database
-CREATE DATABASE mongodb_demo
-WITH
-  ENGINE = 'mongodb',
-  PARAMETERS = {
-    "host": "mongodb+srv://demouser:MindsDB_demo@mindsdb-demo.whljnvh.mongodb.net/public-demo"
-  };
+--use the same dialect to retrieve even from a non-SQL database, like MondoDB
+SELECT COUNT(*) AS negative_emails_last_30_days
+FROM mongodb.support_tickets
+WHERE sentiment = 'negative'
+  AND created_at >= CURRENT_DATE - INTERVAL '30 days';
+```
 
---3. Blend MongoDB and Postgres data into a single view
-CREATE VIEW mindsdb.enterprise_sales AS (
-  SELECT *
-  FROM postgres_demo.websales_sales AS sales
-  JOIN mongodb_demo.customers AS customers
-     ON sales.customer_id = customers.customer_id
-  WHERE
-     customers.segment = "Enterprise"
-     AND sales.sales > 1000
+Create <a href="https://docs.mindsdb.com/mindsdb_sql/sql/create/view?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">views</a> and join data even from different types of data systems.
+```sql
+--join MongoDB and Salesforce data
+CREATE VIEW risky_renewals AS (
+SELECT *
+FROM mongodb.support_tickets AS reviews
+JOIN salesforce.opportunities AS deals
+  ON reviews.customer_domain = deals.customer_domain
+WHERE deals.type = "renewal"
+  AND reviews.sentiment = "negative"
 );
 ```
 
-2) Vectorize unstructured data by creating a "knowledge base."
-   Docs: <a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Knowledge bases</a>.
-
+Join vectorized and structured data inside <a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">knowledge bases</a>. Search semantically and by specific metadata in the same query.
 ```sql
--- 4. Create a knowledge base
-CREATE KNOWLEDGE BASE reviews_kb
+--create a knowledge base for customer issues 
+CREATE KNOWLEDGE_BASE customers_issues
 USING
-  content_columns  = ['review_text'],
-  metadata_columns = ['review_id','product_id','customer_id','rating','review_date'];
+  storage = my_vector.db,
+  content_columns = ['ticket_description'];
+  metadata_columns = ['customer_name', 'segment', 'revenue', 'is_pending_renewal'];
 
--- 5. Insert data into a knowledge base
-INSERT INTO reviews_kb
-SELECT review_text, review_id, product_id, customer_id, rating, review_date
-FROM mongodb_demo.reviews;
+--find large customers who submitted ticket related to data security topics  
+SELECT * FROM customers_issues
+WHERE content = 'data security'
+AND
+  is_pending_renewal = 'true'.
+  revenue > 1000000;
 ```
 
-3) Ask questions in natural language.
-   Docs: <a href="https://docs.mindsdb.com/mindsdb_sql/agents/agent?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Agents</a>.
+Use MindsDB pre-packaged <a href="https://docs.mindsdb.com/mindsdb_sql/agents/agent_syntax?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">data agents</a> and connect them with your own. See how to use MindsDB via <a href="https://docs.mindsdb.com/overview_sdks_apis?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">API or MCP</a>.
 ```sql
--- 6. Create an agent
 CREATE AGENT my_agent
 USING
-data = { 
-   "knowledge_bases": ["mindsdb.reviews_kb"],
-   "tables": ['mindsdb.enterprise_sales']
-},
-prompt_template='you are a skilled data analyst. Provide accurate responses based on the data available to you:
-"mindsdb.reviews_kb" has data about product reviews
-"mindsdb.enterprise_sales" has data about sales to enterprise customers
-';
-
--- 7. Query agent
-SELECT answer
-FROM my_agent 
-WHERE question = 'What do enterprise customers say about our best-selling product?';
+    model = {
+        "provider": "openai",
+        "model_name" : "gpt-xx",
+        "api_key": "sk-..."
+    },
+    data = {
+         "knowledge_bases": ["mindsdb.customer_issues"],
+         "tables": ["salesforce.opportunities", "postgres.sales", "mongodb.support_tickets"]
+    },
+    prompt_template = 'my prompt template and agent guidance';
 ```
-
-Integrate via API or MCP: <a href="https://docs.mindsdb.com/overview_sdks_apis?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">SDKs & APIs</a>.
+See MindsDB’s recommended usage of agents <a href="https://docs.mindsdb.com/mindsdb_sql/agents/agent?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">here</a> and how to automate workflows with <a href="https://docs.mindsdb.com/mindsdb_sql/sql/create/jobs?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">jobs</a>.
 
 ## 📃 Tutorials
 - Enterprise Knowledge Search (<a href="https://mindsdb.com/blog/fast-track-knowledge-bases-how-to-build-semantic-ai-search-by-andriy-burkov?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">example</a>)
@@ -215,15 +204,14 @@ Stuck on a query? Found a bug? We’re here to help.
 
 ## 🤝 Contribute to MindsDB
 
-MindsDB is open source and contributions are welcome, whether you're fixing a bug, adding an integration, improving docs, or building agent capabilities.
+MindsDB is open source and contributions are welcome! You can submit code changes through pull requests or by opening issues to report bugs, suggest new features, or enhancements.
 
-<strong>Ways you can help:</strong>
-- 🔌 Add a data integration: Connect new databases, SaaS APIs, or vector stores.
-- 🧠 Add an AI handler: Integrate new LLMs or specialized models into the reasoning engine.
-- 📚 Improve documentation: Clarify guides, fix typos, add examples.
-- 🐛 Report bugs: File issues with clear steps to reproduce.
+**Ways you can help:**
+- Develop a <a href="https://docs.mindsdb.com/contribute/data-handlers">database integration</a>
+- Develop an <a href="https://docs.mindsdb.com/contribute/app-handlers">app integration</a>
+- Identify and fix bugs
 
-<strong>Ready to start?</strong>
+**How to contribute**
 
 - Read the <a href="https://docs.mindsdb.com/contribute/contribute?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">contribution guide</a> to get set up.
 - Browse <a href="https://github.com/mindsdb/mindsdb/issues">open issues</a>.
@@ -241,10 +229,10 @@ MindsDB is open source and contributions are welcome, whether you're fixing a bu
 Made with [contrib.rocks](https://contrib.rocks)
 </div>
 
-## 📚 Useful Resources
-
-- Product news & guides (<a href="https://mindsdb.com/blog?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">blog</a>)
-- Live demos & webinars (<a href="https://mindsdb.com/events?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">events</a>)
-= Community support (<a href="https://mindsdb.com/joincommunity">Slack</a>)
-- Brand guidelines (<a href="https://mindsdb.com/press-kit?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">press kit</a>)
-- Contact (<a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">form</a>)
+## 📚 Resources
+- <a href="https://docs.mindsdb.com?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Documentation</a>
+- <a href="https://mindsdb.com/blog?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Blog</a>
+- <a href="https://mindsdb.com/events?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Events</a>
+- <a href="https://mindsdb.com/joincommunity">Community Slack</a>
+- <a href="https://mindsdb.com/press-kit?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Brand guidelines</a>
+- <a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Contact form</a>
