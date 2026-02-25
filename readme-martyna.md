@@ -34,27 +34,27 @@ MindsDB is a widely used open-source query engine for AI analytics. It enables A
 
 The key features include:
 
-Federated Query Engine
-Knowledge Bases
-AI Agents
-MCP API
-Automation
+- <a href="https://docs.mindsdb.com/integrations/data-overview">Federated Query Engine</a>
+- <a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview">Knowledge Bases</a>
+- <a href="https://docs.mindsdb.com/mindsdb_sql/agents/agent">AI Agents</a>
+- <a href="https://docs.mindsdb.com/model-context-protocol/overview">MCP API</a>
+- <a href="https://docs.mindsdb.com/mindsdb_sql/sql/create/jobs">Automation</a>
 
-Watch MindsDB demo here.
+Watch MindsDB demo <a href="https://www.youtube.com/watch?v=HN4fHtS4mvo">here</a>.
 
 ## Enterprise Solution Built with MindsDB
 
 Minds are specialized AI agents designed to answer questions across large-scale enterprise data.
 
-Securely connect your enterprise systems and operate at scale.
-Get accurate, data-driven insights through simple natural language queries.
-Share resources and insights across your teams.
+- Securely connect your enterprise systems and operate at scale.
+- Get accurate, data-driven insights through simple natural language queries.
+- Share resources and insights across your teams.
 
-Watch Minds demo here.
+Watch Minds demo <a href="https://www.youtube.com/watch?v=QIdPpzcaxXg">here</a>.
 
 ## Setup
 
-Users can install MindsDB via Docker, Docker Extension, or PyPI.
+Users can install MindsDB via <a href="https://docs.mindsdb.com/setup/self-hosted/docker">Docker</a>, <a href="https://docs.mindsdb.com/setup/self-hosted/docker-desktop">Docker Extension</a>, or <a href="https://docs.mindsdb.com/contribute/install">PyPI</a>.
 
 Here is how to pull and run MindsDB via Docker:
 ```bash
@@ -76,9 +76,9 @@ python -m mindsdb
 ```
 ## Usage
 
-Follow the quickstart guide to get started with MindsDB.
+**Follow the <a href="https://docs.mindsdb.com/quickstart-tutorial">quickstart guide</a> to get started with MindsDB.**
 
-Users can connect data from different data sources to MindsDB. No ETL, no data movement or transformation are required.
+Users can connect data from different  <a href="https://docs.mindsdb.com/integrations/data-overview">data sources</a> to MindsDB. No ETL, no data movement or transformation are required.
 ```sql
 CREATE DATABASE postgresql_conn
 WITH ENGINE = 'postgres', 
@@ -93,7 +93,7 @@ PARAMETERS = {
 ```
 MindsDB enables querying data across connected data sources.
 
-Users can create views with federated data from disparate data sources.
+Users can  <a href="https://docs.mindsdb.com/mindsdb_sql/sql/create/view">create views</a> with federated data from disparate data sources.
 ```sql
 CREATE VIEW aggregated_data (
 SELECT *
@@ -104,7 +104,7 @@ ON p.transporation = f.vehicletype
 ```
 MindsDB enables aggregation of data through views.
 
-Users can create RAG pipelines by inserting all their data into knowledge bases that embed and store data for efficient AI retrieval.
+Users can create RAG pipelines by inserting all their data into  <a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview">knowledge bases</a> that embed and store data for efficient AI retrieval.
 ```sql
 CREATE KNOWLEDGE_BASE movies_kb
 USING
@@ -125,7 +125,7 @@ USING
 ```
 MindsDB enables semantic search across unstructured data.
 
-Users can ask questions over their federated data using agents.
+Users can ask questions over their federated data using <a href="https://docs.mindsdb.com/mindsdb_sql/agents/agent_syntax">agents</a>.
 ```sql
 CREATE AGENT my_agent
 USING
@@ -141,9 +141,9 @@ USING
     prompt_template = 'mindsdb.movies_kb stores data about movies,
                       postgresql_conn.travel stores data about travel details';
 ```
-See MindsDB’s recommended usage of agents here.
+See MindsDB’s recommended usage of agents <a href="https://docs.mindsdb.com/mindsdb_sql/agents/agent">here</a>.
 
-Users can automate workflows with jobs.
+Users can automate workflows with <a href="https://docs.mindsdb.com/mindsdb_sql/sql/create/jobs">jobs</a>.
 ```sql
 CREATE JOB save_agent_output AS (
 
@@ -195,14 +195,14 @@ Developers can contribute to MindsDB by submitting code changes through pull req
 
 Here are some ideas for contributors:
 
-Develop a database integration
-Develop an app integration
-Identify and fix bugs
+- <a href="https://docs.mindsdb.com/contribute/data-handlers">Develop a database integration</a>
+- <a href="https://docs.mindsdb.com/contribute/app-handlers">Develop an app integration</a>
+- Identify and fix bugs
 
 How to contribute:
 
-Install MindsDB for development
-Push code changes to the MindsDB repository
+- <a href="https://docs.mindsdb.com/contribute/install">Install MindsDB for development</a>
+- <a href="https://docs.mindsdb.com/contribute/contribute">Push code changes to the MindsDB repository</a>
 
 Security Vulnerabilities
 If you discover a security vulnerability, please follow the reporting process outlined in our <a href="https://github.com/mindsdb/mindsdb/security">Security Policy</a>.
@@ -211,8 +211,8 @@ If you discover a security vulnerability, please follow the reporting process ou
 
 If you encounter any issues or have questions about MindsDB, you can reach us through the following channels:
 
-* Ask questions in our Slack Community
-* Join the discussion on GitHub Discussions
+- Ask questions in our <a href="https://mindsdb.com/joincommunity?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">Slack Community</a>
+- Join the discussion on <a href="https://github.com/mindsdb/mindsdb/discussions">GitHub Discussions</a>
 
-For commercial or enterprise support, please contact the MindsDB team directly.
+For commercial or enterprise support, please contact the <a href="https://mindsdb.com/contact?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">MindsDB team directly</a>.
 
