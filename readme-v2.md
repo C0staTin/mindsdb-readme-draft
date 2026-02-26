@@ -123,7 +123,7 @@ WHERE deals.type = "renewal"
 );
 ```
 
-Join vectorized and structured data inside <a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">knowledge bases</a>. Search semantically and by specific metadata in the same query.
+Join vectorized and structured data inside a <a href="https://docs.mindsdb.com/mindsdb_sql/knowledge_bases/overview?utm_medium=community&utm_source=github&utm_campaign=mindsdb%20repo">knowledge base</a>. Combine semantic search with precise metadata criteria in a single SQL query.
 ```sql
 --create a knowledge base for customer issues 
 CREATE KNOWLEDGE_BASE customers_issues
